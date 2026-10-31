@@ -1,0 +1,162 @@
+[
+  {
+    "id": "finance_q3_performance",
+    "advisor": "finance",
+    "keywords": ["revenue", "grow", "grew", "profit", "margin", "q3", "quarter", "income", "performance", "earnings", "segment"],
+    "sources": ["q3_report"],
+    "answer": "Revenue grew 10.0% quarter on quarter, from AED 4,200,000 in Q2 2026 to AED 4,620,000 in Q3 2026. Gross margin improved from 30.0% to 32.0%, and net profit rose 27.9% to AED 652,300, a net margin of 14.1%. Building Construction contributed just over half of the increase (AED 220,000 of AED 420,000).",
+    "calculations": [
+      {"label": "Revenue growth (Q2 to Q3 2026)", "formula": "(Q3 revenue − Q2 revenue) ÷ Q2 revenue × 100", "inputs": [{"name": "Q2 revenue", "value": "AED 4,200,000"}, {"name": "Q3 revenue", "value": "AED 4,620,000"}], "result": "10.0%"},
+      {"label": "Gross margin (Q3 2026)", "formula": "Gross profit ÷ Revenue × 100", "inputs": [{"name": "Gross profit", "value": "AED 1,478,400"}, {"name": "Revenue", "value": "AED 4,620,000"}], "result": "32.0%"},
+      {"label": "Net profit growth (Q2 to Q3 2026)", "formula": "(Q3 net profit − Q2 net profit) ÷ Q2 net profit × 100", "inputs": [{"name": "Q2 net profit", "value": "AED 510,000"}, {"name": "Q3 net profit", "value": "AED 652,300"}], "result": "27.9%"},
+      {"label": "Net margin (Q3 2026)", "formula": "Net profit ÷ Revenue × 100", "inputs": [{"name": "Net profit", "value": "AED 652,300"}, {"name": "Revenue", "value": "AED 4,620,000"}], "result": "14.1%"}
+    ],
+    "citations": [
+      {"source": "q3_report", "location": "Page 1 · Income statement", "snippet": "Revenue: Q2 2026 AED 4,200,000 | Q3 2026 AED 4,620,000. Net profit: Q2 2026 AED 510,000 | Q3 2026 AED 652,300."},
+      {"source": "q3_report", "location": "Page 1 · Revenue by segment", "snippet": "Building Construction: Q2 2026 AED 2,550,000 | Q3 2026 AED 2,770,000."}
+    ]
+  },
+  {
+    "id": "finance_budget",
+    "advisor": "finance",
+    "keywords": ["budget", "spend", "spent", "overspen", "over budget", "variance", "expense", "cost", "department", "utili", "ytd", "year to date"],
+    "sources": ["budget_2026"],
+    "answer": "By 30 September 2026 the company had spent AED 10,192,000, which is 78.4% of the AED 13,000,000 annual budget, while 75% of the year had passed. Spending is AED 442,000 (4.5%) above the pro-rata budget of AED 9,750,000. The largest overruns are Sales & Marketing (12.7% over its pro-rata budget) and IT & Digital (12.0% over); Human Resources and Administration are under budget.",
+    "calculations": [
+      {"label": "Budget used (Jan to Sep 2026)", "formula": "Actual spend ÷ Annual budget × 100", "inputs": [{"name": "Actual spend", "value": "AED 10,192,000"}, {"name": "Annual budget", "value": "AED 13,000,000"}], "result": "78.4%"},
+      {"label": "Pro-rata budget (9 of 12 months)", "formula": "Annual budget × 9 ÷ 12", "inputs": [{"name": "Annual budget", "value": "AED 13,000,000"}], "result": "AED 9,750,000"},
+      {"label": "Variance against pro-rata budget", "formula": "(Actual spend − Pro-rata budget) ÷ Pro-rata budget × 100", "inputs": [{"name": "Actual spend", "value": "AED 10,192,000"}, {"name": "Pro-rata budget", "value": "AED 9,750,000"}], "result": "AED 442,000 over (4.5%)"},
+      {"label": "Sales & Marketing variance", "formula": "(Actual − Annual budget × 9 ÷ 12) ÷ (Annual budget × 9 ÷ 12) × 100", "inputs": [{"name": "Actual", "value": "AED 1,014,000"}, {"name": "Annual budget", "value": "AED 1,200,000"}], "result": "12.7% over"}
+    ],
+    "citations": [
+      {"source": "budget_2026", "location": "Table 1 · Budget against actual, January to September 2026", "snippet": "Total: annual budget AED 13,000,000 | actual January to September AED 10,192,000."},
+      {"source": "budget_2026", "location": "Table 1 · Sales & Marketing", "snippet": "Sales & Marketing: annual budget AED 1,200,000 | actual AED 1,014,000."}
+    ]
+  },
+  {
+    "id": "hr_annual_leave",
+    "advisor": "hr",
+    "keywords": ["leave", "vacation", "holiday", "days off", "time off", "entitle", "carry"],
+    "sources": ["handbook_2025", "hr_update_2026"],
+    "answer": "Employees are entitled to 25 working days of paid annual leave per year from 1 January 2026, according to the HR Policy Update 2026. The Employee Handbook 2025 still states 22 working days, so the two documents conflict. The newer policy applies, because it states that it replaces the annual leave section (4.1) of the handbook.",
+    "conflicts": [
+      {
+        "topic": "Annual leave entitlement",
+        "positions": [
+          {"source": "handbook_2025", "statement": "22 working days per calendar year after probation (Section 4.1)"},
+          {"source": "hr_update_2026", "statement": "25 working days per year, effective 1 January 2026 (Section 1)"}
+        ],
+        "resolution": "Resolved: the HR Policy Update 2026 says it replaces Section 4.1 of the handbook, so 25 days applies. HR should update the handbook to remove the conflict."
+      }
+    ],
+    "missing_information": ["Neither document says whether unused annual leave can be carried over to the next year."],
+    "citations": [
+      {"source": "hr_update_2026", "location": "Section 1 · Annual leave", "snippet": "From 1 January 2026, all employees are entitled to 25 working days of paid annual leave per year. This replaces Section 4.1 of the Employee Handbook 2025."},
+      {"source": "handbook_2025", "location": "Section 4.1 · Annual leave", "snippet": "Employees are entitled to 22 working days of paid annual leave per calendar year after completing probation."}
+    ]
+  },
+  {
+    "id": "hr_remote_work",
+    "advisor": "hr",
+    "keywords": ["remote", "work from home", "working from home", "wfh", "hybrid", "abroad", "outside the uae", "overseas"],
+    "sources": ["handbook_2025", "hr_update_2026"],
+    "answer": "The documents disagree on how many remote days are allowed. The Employee Handbook 2025 allows 1 remote day per week with manager approval, while the HR Policy Update 2026 allows up to 2 days per week for eligible office-based roles after probation. The update does not say that it replaces the handbook's remote work section, so please confirm with HR. No document covers working remotely from outside the UAE.",
+    "conflicts": [
+      {
+        "topic": "Remote working days per week",
+        "positions": [
+          {"source": "handbook_2025", "statement": "Up to 1 day per week with manager approval (Section 6)"},
+          {"source": "hr_update_2026", "statement": "Up to 2 days per week for eligible office-based roles after probation (Section 2)"}
+        ],
+        "resolution": "Unresolved: the update does not state that it replaces Section 6 of the handbook. The newer document is more likely to be current; confirm with HR."
+      }
+    ],
+    "missing_information": ["No document covers working remotely from outside the UAE.", "The documents do not list which roles are eligible for remote work."],
+    "citations": [
+      {"source": "handbook_2025", "location": "Section 6 · Remote work", "snippet": "Employees may work remotely for up to 1 day per week with the approval of their manager."},
+      {"source": "hr_update_2026", "location": "Section 2 · Remote work", "snippet": "Eligible office-based employees who have completed probation may work remotely for up to 2 days per week, with line manager approval."}
+    ]
+  },
+  {
+    "id": "hr_executive_compensation",
+    "advisor": "hr",
+    "keywords": ["salary", "salaries", "ceo", "cfo", "coo", "executive", "compensation", "package", "bonus", "remuneration"],
+    "sources": ["exec_comp_2026"],
+    "answer": "The CEO's total monthly package is AED 110,000 (AED 80,000 basic salary plus AED 30,000 allowances), with an annual bonus target of 25% of annual basic salary, which is AED 240,000. Total annual fixed pay for the three executives (CEO, CFO and COO) is AED 3,060,000.",
+    "calculations": [
+      {"label": "CEO annual bonus target", "formula": "Monthly basic × 12 × 25%", "inputs": [{"name": "Monthly basic", "value": "AED 80,000"}, {"name": "Bonus target", "value": "25%"}], "result": "AED 240,000"},
+      {"label": "Executive fixed pay per year", "formula": "(CEO + CFO + COO monthly packages) × 12", "inputs": [{"name": "CEO", "value": "AED 110,000"}, {"name": "CFO", "value": "AED 75,000"}, {"name": "COO", "value": "AED 70,000"}], "result": "AED 3,060,000"}
+    ],
+    "citations": [
+      {"source": "exec_comp_2026", "location": "Table 1 · Executive packages 2026", "snippet": "Chief Executive Officer: basic AED 80,000 | allowances AED 30,000 | total AED 110,000 per month | bonus target 25% of annual basic."}
+    ]
+  },
+  {
+    "id": "hr_salary_payment",
+    "advisor": "hr",
+    "keywords": ["salary", "salaries", "paid", "payment", "payday", "pay day", "pay date", "wps", "payslip"],
+    "sources": ["handbook_2025"],
+    "answer": "Salaries are paid monthly through the UAE Wage Protection System (WPS), on or before the 25th of each month. If the 25th falls on a weekend or public holiday, salaries are paid on the previous working day.",
+    "citations": [
+      {"source": "handbook_2025", "location": "Section 3.2 · Salary payment", "snippet": "Salaries are paid through the Wage Protection System (WPS) on or before the 25th of each month."}
+    ]
+  },
+  {
+    "id": "hr_working_hours",
+    "advisor": "hr",
+    "keywords": ["working hours", "work hours", "office hours", "hours", "ramadan", "overtime", "timing"],
+    "sources": ["handbook_2025"],
+    "answer": "Standard working hours are 8:00 to 17:00, Monday to Friday, with a one-hour lunch break, which is 40 hours per week. During Ramadan the working day is two hours shorter. Overtime must be approved in advance by a manager and is paid at 125% of the basic hourly wage.",
+    "calculations": [
+      {"label": "Weekly working hours", "formula": "(9 hours − 1 hour lunch) × 5 days", "inputs": [{"name": "Office day", "value": "8:00 to 17:00"}, {"name": "Lunch break", "value": "1 hour"}], "result": "40 hours"}
+    ],
+    "citations": [
+      {"source": "handbook_2025", "location": "Section 3.1 · Working hours", "snippet": "Working hours are 8:00 to 17:00, Monday to Friday, including a one-hour lunch break. During Ramadan, working hours are reduced by two hours per day."},
+      {"source": "handbook_2025", "location": "Section 3.3 · Overtime", "snippet": "Overtime must be approved in advance by the employee's manager and is paid at 125% of the basic hourly wage."}
+    ]
+  },
+  {
+    "id": "management_procurement",
+    "advisor": "hr",
+    "keywords": ["purchase", "procure", "buy", "approv", "quotation", "quote", "vendor", "supplier", "invoice", "purchase order"],
+    "sources": ["procurement_2026"],
+    "answer": "Purchases are approved by amount: up to AED 10,000 by the Department Head, from AED 10,001 to AED 100,000 by the Finance Manager, and above AED 100,000 by the CFO and CEO together. Any purchase above AED 25,000 also needs three written quotations from different suppliers, and splitting a purchase to stay under a limit is not allowed.",
+    "citations": [
+      {"source": "procurement_2026", "location": "Section 2 · Approval limits", "snippet": "Up to AED 10,000: Department Head. AED 10,001 to AED 100,000: Finance Manager. Above AED 100,000: CFO and CEO jointly."},
+      {"source": "procurement_2026", "location": "Section 3 · Quotations", "snippet": "Purchases above AED 25,000 require three written quotations from different suppliers."}
+    ]
+  },
+  {
+    "id": "management_board_decisions",
+    "advisor": "hr",
+    "keywords": ["board", "minutes", "meeting", "expan", "abu dhabi", "branch", "acqui", "project falcon", "restructur", "hiring freeze", "strategy", "capex"],
+    "sources": ["board_q3_2026"],
+    "answer": "At its Q3 2026 meeting on 24 September 2026, the board approved a new Abu Dhabi branch opening in Q1 2027 with a capital budget of AED 2,500,000, a hiring freeze in Administration until 31 March 2027, and a 2027 salary increase budget of 4% of payroll. It also asked management to evaluate buying a smaller MEP contractor (Project Falcon) and report back by 15 December 2026.",
+    "citations": [
+      {"source": "board_q3_2026", "location": "Resolutions 1 to 4", "snippet": "Resolution 1: The Board approves the opening of an Abu Dhabi branch in Q1 2027 with a capital budget of AED 2,500,000."}
+    ]
+  },
+  {
+    "id": "knowledge_projects",
+    "advisor": "knowledge",
+    "keywords": ["project", "contract", "client", "backlog", "pipeline", "site", "tower", "warehouse", "school"],
+    "sources": ["q3_report"],
+    "answer": "At 30 September 2026 the company had 14 active projects and a contract backlog of AED 38,400,000. The three largest are the Al Barsha Residential Tower (contract value AED 18,500,000, 62% complete), the Sharjah Logistics Warehouse (AED 7,200,000, 35% complete) and the Ajman School Extension (AED 4,100,000, 80% complete).",
+    "citations": [
+      {"source": "q3_report", "location": "Page 2 · Operations update", "snippet": "Active projects at 30 September 2026: 14. Contract backlog: AED 38,400,000."},
+      {"source": "q3_report", "location": "Page 2 · Major projects", "snippet": "Al Barsha Residential Tower: contract value AED 18,500,000, 62% complete."}
+    ]
+  },
+  {
+    "id": "knowledge_overview",
+    "advisor": "knowledge",
+    "keywords": ["summar", "overview", "document", "about", "company", "library", "available", "what do we have"],
+    "sources": ["q3_report", "hr_update_2026", "procurement_2026"],
+    "answer": "Oasis Peak Contracting LLC (a fictional company used for this demo) is a UAE building and MEP contractor. The shared document library covers quarterly financial results, the 2026 budget, HR policies and the procurement policy. For example, Q3 2026 revenue was AED 4,620,000, annual leave is 25 working days from 1 January 2026, and purchases above AED 25,000 need three quotations.",
+    "citations": [
+      {"source": "q3_report", "location": "Page 1 · Highlights", "snippet": "Oasis Peak Contracting LLC reports Q3 2026 revenue of AED 4,620,000."},
+      {"source": "hr_update_2026", "location": "Section 1 · Annual leave", "snippet": "From 1 January 2026, all employees are entitled to 25 working days of paid annual leave per year."},
+      {"source": "procurement_2026", "location": "Section 3 · Quotations", "snippet": "Purchases above AED 25,000 require three written quotations from different suppliers."}
+    ]
+  }
+]

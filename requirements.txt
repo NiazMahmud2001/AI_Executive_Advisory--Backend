@@ -1,0 +1,22 @@
+# Phase 1: REST shell
+fastapi==0.139.0
+uvicorn==0.51.0
+pydantic==2.12.4
+python-multipart==0.0.32
+python-dotenv==1.2.1
+bcrypt==5.0.0
+cryptography==49.0.0
+
+# Tests
+pytest==9.2.0
+httpx==0.28.1
+
+# Phase 2: LangGraph agent with an OpenRouter model, text extraction
+langgraph==1.2.19
+langchain-core==1.7.3
+langchain-openai==1.7.3
+pypdf==6.21.4
+python-docx==1.2.0
+
+# Phase 2 (add when Supabase is connected)
+# supabase
