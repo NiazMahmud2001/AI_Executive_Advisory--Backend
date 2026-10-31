@@ -1,0 +1,58 @@
+[
+  {
+    "key": "q3_report",
+    "file": "Q3_2026_Financial_Report.pdf",
+    "title": "Q3 2026 Financial Report",
+    "category": "finance",
+    "classification": "general",
+    "summary": "Q3 2026 revenue rose 10.0% to AED 4,620,000 and net profit to AED 652,300; 14 active projects and an AED 38.4M contract backlog."
+  },
+  {
+    "key": "budget_2026",
+    "file": "FY2026_Budget_Summary.docx",
+    "title": "FY2026 Budget Summary",
+    "category": "finance",
+    "classification": "general",
+    "summary": "AED 10,192,000 spent by 30 September (78.4% of the AED 13,000,000 budget); Sales & Marketing and IT & Digital are running over budget."
+  },
+  {
+    "key": "handbook_2025",
+    "file": "Employee_Handbook_2025.pdf",
+    "title": "Employee Handbook 2025",
+    "category": "hr",
+    "classification": "general",
+    "summary": "Policies on probation, working hours, salary payment (WPS, by the 25th), overtime, annual leave (22 days), sick leave, notice and remote work."
+  },
+  {
+    "key": "hr_update_2026",
+    "file": "HR_Policy_Update_2026.docx",
+    "title": "HR Policy Update 2026",
+    "category": "hr",
+    "classification": "general",
+    "summary": "From 1 January 2026: 25 days of annual leave, up to 2 remote days per week for eligible roles, 5 days of parental leave and an AED 4,000 learning budget."
+  },
+  {
+    "key": "procurement_2026",
+    "file": "Procurement_Policy_2026.txt",
+    "title": "Procurement Policy 2026",
+    "category": "management",
+    "classification": "general",
+    "summary": "Approval limits by amount, three quotations above AED 25,000, no split purchases and 60-day supplier payment terms."
+  },
+  {
+    "key": "exec_comp_2026",
+    "file": "Executive_Compensation_2026.pdf",
+    "title": "Executive Compensation 2026",
+    "category": "hr",
+    "classification": "confidential",
+    "summary": "Confidential: 2026 packages for the CEO, CFO and COO (AED 255,000 per month in total) and their bonus targets."
+  },
+  {
+    "key": "board_q3_2026",
+    "file": "Board_Minutes_Q3_2026.txt",
+    "title": "Board Minutes Q3 2026",
+    "category": "management",
+    "classification": "confidential",
+    "summary": "Confidential: Abu Dhabi branch (AED 2.5M capital budget), Administration hiring freeze, 4% salary increase budget for 2027 and the Project Falcon study."
+  }
+]

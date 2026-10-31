@@ -15,7 +15,8 @@ from cryptography.fernet import Fernet
 
 BASE_DIR = Path(__file__).resolve().parent
 ENV_FILE = BASE_DIR / ".env"
-SAMPLE_DIR = BASE_DIR.parent / "sample_docs"
+# Inside this folder when the backend is its own repository (as on Render), next to it in the full project.
+SAMPLE_DIR = next((p for p in (BASE_DIR / "sample_docs", BASE_DIR.parent / "sample_docs") if p.exists()), BASE_DIR / "sample_docs")
 
 
 def ensure_env_file() -> bool:
